@@ -30,7 +30,7 @@ export default function Home() {
         <div className="flex items-center justify-center gap-4 sm:gap-6 mb-14">
           <div className="animate-slide-in-left delay-100">
             <Image
-              src="/logo-fityatulhaq.png"
+              src="/logo-fityatulhaq-globe.png"
               alt="FITYATULHAQ Logo"
               width={150}
               height={150}
@@ -70,6 +70,22 @@ export default function Home() {
         <div className="animate-fade-in delay-1000 mt-10 flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#0099cc] animate-pulse" />
           <span className="text-sm text-gray-400 tracking-widest uppercase">Stay tuned</span>
+        </div>
+
+        {/* Register CTA */}
+        <div className="animate-fade-in delay-1100 mt-8">
+          <a
+            href="https://docs.fityatulhaq.org/register"
+            id="register-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-[#0099cc] to-[#33bbee] text-white font-semibold text-sm tracking-wide shadow-lg shadow-[#0099cc]/20 hover:shadow-xl hover:shadow-[#0099cc]/30 hover:scale-105 transition-all duration-300 ease-out"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            </svg>
+            สมัครสมาชิกกลุ่ม
+          </a>
         </div>
 
         {/* Social Links — ใส่ลิงค์ได้ที่ href */}
