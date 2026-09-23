@@ -133,6 +133,23 @@ export default function ContactPage() {
         <button
           className="absolute right-0 top-0 p-3 rounded-full bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)] text-gray-500 hover:text-gray-900 transition-colors"
           aria-label="Share"
+          onClick={async () => {
+            const shareData = {
+              title: `${currentData.name} — Contact`,
+              text: `ติดต่อ ${currentData.name} ผ่านช่องทางต่างๆ`,
+              url: window.location.href,
+            };
+            try {
+              if (navigator.share) {
+                await navigator.share(shareData);
+              } else {
+                await navigator.clipboard.writeText(window.location.href);
+                alert('คัดลอกลิงก์แล้ว!');
+              }
+            } catch (err) {
+              // User cancelled share
+            }
+          }}
         >
           <Share2 className="w-5 h-5" />
         </button>
