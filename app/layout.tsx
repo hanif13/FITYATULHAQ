@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_Thai } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_Thai, Prompt } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,6 +16,12 @@ const notoSansThai = Noto_Sans_Thai({
   variable: "--font-noto-thai",
   subsets: ["thai"],
   weight: ["700", "800", "900"],
+});
+
+const prompt = Prompt({
+  variable: "--font-prompt",
+  subsets: ["thai", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -39,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${notoSansThai.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${notoSansThai.variable} ${prompt.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">{children}</body>
     </html>
